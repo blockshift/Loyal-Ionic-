@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color = "primary" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hello Ionic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>Welcome to your first Home Page !</h3>
+
+
+  <p> Username :  {{(profileData | async) ?. username  }}</p>
+  <p> Firstname :  {{(profileData | async) ?. firstname  }}</p>
+  <p> Lastname :   {{(profileData | async) ?. lastname  }}</p>
+
+</ion-content>
