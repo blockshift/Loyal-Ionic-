@@ -1,3 +1,4 @@
+import { LoginPage } from './../login/login';
 import { AngularFireDatabase , FirebaseObjectObservable } from 'angularfire2/database-deprecated';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -40,5 +41,10 @@ profileData : FirebaseObjectObservable<Profile>
     })
   }
 
+
+  logout() {
+      this.authfire.auth.signOut();
+    this.navCtrl.setRoot(LoginPage);
+  }
 
 }

@@ -13,8 +13,11 @@
   <h3>Welcome to your first Home Page !</h3>
 
 
-  <p> Username :  {{(profileData | async) ?. username  }}</p>
+  <!-- <p> Username :  {{(profileData | async) ?. username  }}</p>
   <p> Firstname :  {{(profileData | async) ?. firstname  }}</p>
-  <p> Lastname :   {{(profileData | async) ?. lastname  }}</p>
+  <p> Lastname :   {{(profileData | async) ?. lastname  }}</p> -->
+
+
+<button ion-button color="primary" (click)="logout()">Logout</button>
 
 </ion-content>

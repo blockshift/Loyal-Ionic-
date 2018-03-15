@@ -9,6 +9,8 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
+import { UserPage } from '../pages/user/user';
+import { QrscannerPage } from '../pages/qrscanner/qrscanner';
 
 
 @Component({
@@ -32,8 +34,9 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
-      // { title: 'My First List', component: ListPage },
-       //{ title : 'Profile' , component : ProfilePage }
+      { title: 'My First List', component: ListPage },
+       { title : 'User Details' , component : UserPage },
+       {title : 'QR Scanner' , component : QrscannerPage }
     ];
   }
 

@@ -21,6 +21,11 @@ import { ProfilePageModule } from '../pages/profile/profile.module';
 //import { AngularFireDatabase } from 'angularfire2/database';
 //import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabaseModule, } from 'angularfire2/database-deprecated';
+import { UserPageModule } from '../pages/user/user.module';
+import { UserPage } from '../pages/user/user';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { QrscannerPage } from '../pages/qrscanner/qrscanner';
+import { QrscannerPageModule } from '../pages/qrscanner/qrscanner.module';
 
 
 const FIREBASE_CONFIG =  {
@@ -41,7 +46,9 @@ const FIREBASE_CONFIG =  {
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    LoginPage
+    LoginPage,
+    //UserPage
+    
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,10 @@ const FIREBASE_CONFIG =  {
     RegisterPageModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    ProfilePageModule
+    ProfilePageModule,
+    UserPageModule,
+    QrscannerPageModule
+
 
   ],
   bootstrap: [IonicApp],
@@ -60,12 +70,14 @@ const FIREBASE_CONFIG =  {
     ItemDetailsPage,
     ListPage,
     LoginPage,
+    //UserPage
     
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BarcodeScanner,
   ],
   schemas:[ 
     CUSTOM_ELEMENTS_SCHEMA 
