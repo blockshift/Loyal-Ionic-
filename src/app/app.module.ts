@@ -23,7 +23,7 @@ import { ProfilePageModule } from '../pages/profile/profile.module';
 import { AngularFireDatabaseModule, } from 'angularfire2/database-deprecated';
 import { UserPageModule } from '../pages/user/user.module';
 import { UserPage } from '../pages/user/user';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+//import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { QrscannerPage } from '../pages/qrscanner/qrscanner';
 import { QrscannerPageModule } from '../pages/qrscanner/qrscanner.module';
 
@@ -77,7 +77,7 @@ const FIREBASE_CONFIG =  {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BarcodeScanner,
+    //BarcodeScanner,
   ],
   schemas:[ 
     CUSTOM_ELEMENTS_SCHEMA 

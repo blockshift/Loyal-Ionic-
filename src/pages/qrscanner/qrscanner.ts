@@ -1,4 +1,4 @@
-import { BarcodeScanner , BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
+//import { BarcodeScanner , BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -17,19 +17,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class QrscannerPage {
 
-  options : BarcodeScannerOptions ; 
+  // options : BarcodeScannerOptions ; 
 
-  constructor(public navCtrl: NavController, private barcode : BarcodeScanner , public navParams: NavParams) {
-  }
+  // constructor(public navCtrl: NavController, private barcode : BarcodeScanner , public navParams: NavParams) {
+  // }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad QrscannerPage');
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad QrscannerPage');
 
-  }
+  // }
 
-  async scanCode() {
-    const results =   await this.barcode.scan();
-    console.log(results);
-  }
+  // async scanCode() {
+  //   const results =   await this.barcode.scan();
+  //   console.log(results);
+  // }
 
 }
