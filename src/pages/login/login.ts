@@ -43,6 +43,7 @@ login(user : User) {
     .then(data =>{
       console.log("got data", data);
       this.alert('Successfully ! You\'are Logged in ');
+      window.localStorage.setItem('email',this.user.email);
       this.navCtrl.setRoot(HelloIonicPage);
     })
   }

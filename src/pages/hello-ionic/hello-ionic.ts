@@ -18,7 +18,10 @@ profileData : FirebaseObjectObservable<Profile>
 
   constructor( private authfire : AngularFireAuth , public navCtrl: NavController, public navParams: NavParams,
      private datafire : AngularFireDatabase , private toast :  ToastController ) 
-  {}
+  {
+
+  
+  }
 
   ionViewWillLoad() {
     console.log('ionViewDidLoad HelloIonicPage');
@@ -44,7 +47,12 @@ profileData : FirebaseObjectObservable<Profile>
 
   logout() {
       this.authfire.auth.signOut();
+      window.localStorage.removeItem('email');
     this.navCtrl.setRoot(LoginPage);
+        this.navCtrl.popToRoot();   
+  
   }
+
+
 
 }

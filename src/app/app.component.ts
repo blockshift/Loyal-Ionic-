@@ -20,7 +20,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = LoginPage;
+ // rootPage = HelloIonicPage;
+ rootPage : any ;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -30,7 +31,7 @@ export class MyApp {
     public splashScreen: SplashScreen
   ) {
     this.initializeApp();
-
+    this.checkPreviousAuthorization();
     // set our app's pages
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
@@ -55,4 +56,14 @@ export class MyApp {
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
+
+  checkPreviousAuthorization(): void { 
+    if((window.localStorage.getItem('email') === "undefined" || window.localStorage.getItem('email') === null)) 
+     {
+      this.rootPage = LoginPage;
+    } else {
+      this.rootPage = HelloIonicPage;
+    }
+  } 
+
 }

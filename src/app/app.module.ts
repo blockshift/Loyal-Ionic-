@@ -28,6 +28,7 @@ import { QrscannerPage } from '../pages/qrscanner/qrscanner';
 import { QrscannerPageModule } from '../pages/qrscanner/qrscanner.module';
 
 
+
 const FIREBASE_CONFIG =  {
   apiKey: "AIzaSyCDk9ZO-UPglhDu9tCYm2VL7LsXikYtJdY",
   authDomain: "loyal-490cf.firebaseapp.com",
@@ -77,7 +78,6 @@ const FIREBASE_CONFIG =  {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    //BarcodeScanner,
   ],
   schemas:[ 
     CUSTOM_ELEMENTS_SCHEMA 
