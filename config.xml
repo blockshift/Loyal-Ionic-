@@ -85,4 +85,7 @@
         <variable name="ANDROID_SUPPORT_VERSION" value="26.+" />
     </plugin>
     <engine name="android" spec="~7.0.0" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="^7.1.0">
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.+" />
+    </plugin>
 </widget>

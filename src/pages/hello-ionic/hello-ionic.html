@@ -1,16 +1,27 @@
 <ion-header>
-  <ion-navbar color = "primary" >
+  <ion-navbar color = "danger" >
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Hello Ionic</ion-title>
+    <ion-title>Gravyy</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+<ion-header-bar align-title="center" color ="primary"  >
+<h4 class="title">Select City : </h4>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">All
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Lahore</a></li>
+      <li><a href="#">Karachi</a></li>
+    </ul>
+  </div>
+</ion-header-bar>
 
-  <h3>Welcome to your first Home Page !</h3>
+  <h3>Welcome to your  Home Page !</h3>
 
 
   <!-- <p> Username :  {{(profileData | async) ?. username  }}</p>

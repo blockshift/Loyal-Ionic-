@@ -1,3 +1,4 @@
+
 import { RegisterPageModule } from './../pages/register/register.module';
 import { LoginPage } from './../pages/login/login';
 //import { FIREBASE_CONFIG } from './app.firebase.config';
@@ -23,9 +24,10 @@ import { ProfilePageModule } from '../pages/profile/profile.module';
 import { AngularFireDatabaseModule, } from 'angularfire2/database-deprecated';
 import { UserPageModule } from '../pages/user/user.module';
 import { UserPage } from '../pages/user/user';
-//import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { QrscannerPage } from '../pages/qrscanner/qrscanner';
 import { QrscannerPageModule } from '../pages/qrscanner/qrscanner.module';
+import { Camera } from '@ionic-native/camera';
 
 
 
@@ -78,6 +80,7 @@ const FIREBASE_CONFIG =  {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BarcodeScanner
   ],
   schemas:[ 
     CUSTOM_ELEMENTS_SCHEMA 

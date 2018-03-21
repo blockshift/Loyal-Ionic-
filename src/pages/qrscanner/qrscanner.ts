@@ -1,14 +1,8 @@
-//import { BarcodeScanner , BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner , BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
-/**
- * Generated class for the QrscannerPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -17,19 +11,47 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class QrscannerPage {
 
-  // options : BarcodeScannerOptions ; 
+  scanData : {};
+  options :BarcodeScannerOptions;
+  encodeData : string ;
+  encodedData : {} ;
+  constructor(public navCtrl: NavController , public navParams: NavParams , private scanner : BarcodeScanner  ) {
+  }
 
-  // constructor(public navCtrl: NavController, private barcode : BarcodeScanner , public navParams: NavParams) {
-  // }
+  ionViewDidLoad() {
+     console.log('ionViewDidLoad QrscannerPage');
 
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad QrscannerPage');
-
-  // }
+   }
 
   // async scanCode() {
   //   const results =   await this.barcode.scan();
   //   console.log(results);
   // }
+
+
+  scan() {
+    this.options = {
+      prompt : "Scan your barcode "
+  }
+  this.scanner.scan(this.options).then((barcodeData) => {
+
+      console.log(barcodeData);
+      this.scanData = barcodeData;
+  }, (err) => {
+      console.log("Error occured : " + err);
+  }); 
+  }
+
+
+  encodeText(){
+    this.scanner.encode(this.scanner.Encode.TEXT_TYPE,this.encodeData).then((encodedData) => {
+
+        console.log(encodedData);
+        this.encodedData = encodedData;
+
+    }, (err) => {
+        console.log("Error occured : " + err);
+    });                 
+}
 
 }
