@@ -9,26 +9,21 @@
 
 
 <ion-content padding>
-<ion-header-bar align-title="center" color ="primary"  >
-<h4 class="title">Select City : </h4>
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">All
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Lahore</a></li>
-      <li><a href="#">Karachi</a></li>
-    </ul>
-  </div>
-</ion-header-bar>
 
-  <h3>Welcome to your  Home Page !</h3>
+  <ion-item class="row">
 
+<ion-label class="item item-input item-select"> Select City :</ion-label>
+   
+    <ion-select>
+       <ion-option selected>All</ion-option>
+       <ion-option >Karachi</ion-option>
+       <ion-option>Lahore</ion-option>
+    </ion-select>
+  </ion-item>
 
-  <!-- <p> Username :  {{(profileData | async) ?. username  }}</p>
-  <p> Firstname :  {{(profileData | async) ?. firstname  }}</p>
-  <p> Lastname :   {{(profileData | async) ?. lastname  }}</p> -->
+    <h3>Welcome to your  Home!</h3>
 
 
-<button ion-button color="primary" (click)="logout()">Logout</button>
+
 
 </ion-content>

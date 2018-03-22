@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireDatabase , FirebaseObjectObservable } from 'angularfire2/database-deprecated';
 import { Profile } from '../../models/profile';
+import { LoginPage } from '../login/login';
 
 
 @IonicPage()
@@ -35,5 +36,13 @@ console.log("hello");
     })
 
   }
+
+  logout() {
+    this.authfire.auth.signOut();
+    window.localStorage.removeItem('email');
+  this.navCtrl.setRoot(LoginPage);
+      this.navCtrl.popToRoot();   
+
+}
 
 }
