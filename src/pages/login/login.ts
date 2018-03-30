@@ -47,9 +47,10 @@ login(user : User) {
       this.navCtrl.setRoot(HelloIonicPage);
     })
   }
-  catch(e) {
-    console.log("Error is ",e);
-    this.alert(e.message);
+  catch(error) {
+    console.log("Error hai ",error);
+
+    this.alert('Sorry Login failed /n Email or Password Incorrect ');
   };
   }
   

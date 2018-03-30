@@ -1,3 +1,4 @@
+import { WelcomePage } from './../pages/welcome/welcome';
 import { ProfilePage } from './../pages/profile/profile';
 import { Component, ViewChild } from '@angular/core';
 
@@ -37,7 +38,8 @@ export class MyApp {
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
        { title : 'User Details' , component : UserPage },
-       {title : 'QR Scanner' , component : QrscannerPage }
+       {title : 'QR Scanner' , component : QrscannerPage },
+       {title : 'Welcome', component : WelcomePage}
     ];
   }
 

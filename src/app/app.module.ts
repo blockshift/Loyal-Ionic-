@@ -1,3 +1,4 @@
+import { WelcomePage } from './../pages/welcome/welcome';
 
 import { RegisterPageModule } from './../pages/register/register.module';
 import { LoginPage } from './../pages/login/login';
@@ -50,6 +51,7 @@ const FIREBASE_CONFIG =  {
     ItemDetailsPage,
     ListPage,
     LoginPage,
+    WelcomePage
     //UserPage
     
   ],
@@ -73,6 +75,7 @@ const FIREBASE_CONFIG =  {
     ItemDetailsPage,
     ListPage,
     LoginPage,
+    WelcomePage
     //UserPage
     
   ],
