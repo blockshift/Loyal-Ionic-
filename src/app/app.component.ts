@@ -1,5 +1,5 @@
 import { WelcomePage } from './../pages/welcome/welcome';
-import { ProfilePage } from './../pages/profile/profile';
+//import { ProfilePage } from './../pages/profile/profile';
 import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
@@ -38,8 +38,7 @@ export class MyApp {
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
        { title : 'User Details' , component : UserPage },
-       {title : 'QR Scanner' , component : QrscannerPage },
-       {title : 'Welcome', component : WelcomePage}
+       {title : 'QR Scanner' , component : QrscannerPage }
     ];
   }
 
@@ -62,7 +61,7 @@ export class MyApp {
   checkPreviousAuthorization(): void { 
     if((window.localStorage.getItem('email') === "undefined" || window.localStorage.getItem('email') === null)) 
      {
-      this.rootPage = LoginPage;
+      this.rootPage = WelcomePage;
     } else {
       this.rootPage = HelloIonicPage;
     }

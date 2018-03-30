@@ -4,7 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Profile } from '../../models/profile';
-import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+//import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 
 /**
  * Generated class for the ProfilePage page.

@@ -1,3 +1,5 @@
+import { LoginPage } from './../login/login';
+import { RegisterPage } from './../register/register';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -20,6 +22,16 @@ export class WelcomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
+  }
+
+
+  login() {
+this.navCtrl.setRoot(LoginPage);
+  }
+
+  register () {
+
+this.navCtrl.setRoot(RegisterPage);
   }
 
 }

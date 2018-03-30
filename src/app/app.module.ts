@@ -16,7 +16,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {AngularFireModule} from 'angularfire2'
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RegisterPage } from '../pages/register/register';
 import { AngularFireAuthModule } from "angularfire2/auth";
 //import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { ProfilePageModule } from '../pages/profile/profile.module';
@@ -24,12 +23,8 @@ import { ProfilePageModule } from '../pages/profile/profile.module';
 //import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabaseModule, } from 'angularfire2/database-deprecated';
 import { UserPageModule } from '../pages/user/user.module';
-import { UserPage } from '../pages/user/user';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-import { QrscannerPage } from '../pages/qrscanner/qrscanner';
 import { QrscannerPageModule } from '../pages/qrscanner/qrscanner.module';
-import { Camera } from '@ionic-native/camera';
-
 
 
 const FIREBASE_CONFIG =  {

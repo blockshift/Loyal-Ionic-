@@ -1,7 +1,7 @@
 import { User } from './../../models/user';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
 //import { ProfilePage } from '../profile/profile';
