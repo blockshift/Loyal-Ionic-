@@ -1,5 +1,6 @@
 export interface Profile {
-    username : string ;
-    firstname : string ;
-    lastname :  string ;
+    name : string ;
+    emailaddress : string ;
+    password :  string ;
+    token : string ;
 }

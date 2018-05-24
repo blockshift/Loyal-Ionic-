@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color = "primary" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Offers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-col >
+  <ion-card *ngFor="let l of kam ">
+    <img src="{{l.campaign_picture_url}}" />
+  <ion-card-content>
+    <ion-card-title>
+      {{l.campaign_name}}
+      </ion-card-title>
+    <p> Validity Date : {{l.campaign_Validity_Date}} </p>
+    <p>Campaign Balance : {{l.campaign_balance_utlization}} </p>
+    <p>Campaign Location : {{l.campaign_location}} </p>
+  </ion-card-content>
+</ion-card>
+</ion-col>
+
+
+</ion-content>

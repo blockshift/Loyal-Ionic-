@@ -12,25 +12,18 @@
 
 <ion-content padding>
 
-<ion-item>
-    <ion-input type="text" placeholder="My QR data" [(ngModel)]="encodeData" >
+<!-- <ion-item>
+    <ion-input type="number" placeholder="Token to be given " [(ngModel)]="encodemyData" >
     </ion-input>  
-  </ion-item> 
-    <button ion-button full icon-left (click)="encodeText()"><ion-icon name="barcode" ></ion-icon>Encode Text</button>
+  </ion-item>  -->
+  
+    <button ion-button full icon-left (click)="encodeText()"><ion-icon name="barcode" ></ion-icon> Recieve Gravy Points </button>
 
-  <button ion-button color="primary" full icon-left (click)="scan()" ><ion-icon name="qr-scanner" ></ion-icon> Scan Bar Code </button>
+  <button ion-button color="primary" full icon-left (click)="scan()" ><ion-icon name="qr-scanner" ></ion-icon> Send Gravy Points </button>
 
-  <ion-card *ngIf="scanData">
-    <ion-card-content>
-    <p>Result from Scan : {{scanData}}</p>
-  </ion-card-content>
-  </ion-card>
-
-
-<ion-card *ngIf="encodedData">
-  <ion-card-content>
-    <p>Value : {{encodedData}} </p>
-  </ion-card-content>
-</ion-card>
+  <ion-card   *ngIf="value ">
+    <ngx-qrcode [qrc-element-type]="elementType" [qrc-value] = "value">
+      </ngx-qrcode>
+    </ion-card>
 
 </ion-content>

@@ -1,8 +1,6 @@
 import { WelcomePage } from './../welcome/welcome';
-import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireDatabase , FirebaseObjectObservable } from 'angularfire2/database-deprecated';
 import { Profile } from '../../models/profile';
 import { LoginPage } from '../login/login';
 
@@ -14,33 +12,36 @@ import { LoginPage } from '../login/login';
 })
 export class UserPage {
 
-  profileData : FirebaseObjectObservable<Profile>
-
-  constructor( private authfire : AngularFireAuth , public navCtrl: NavController, public navParams: NavParams,
-    private datafire : AngularFireDatabase  ) 
+  constructor( public navCtrl: NavController, public navParams: NavParams ) 
  {}
-
+ user = {} as Profile ;
+ 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UserPage');
 
-    this.authfire.authState.take(1).subscribe( data => {
-      if(data && data.email && data.uid ) {
+    if((window.localStorage.getItem('email') != "undefined" || window.localStorage.getItem('email') != null  )&&(window.localStorage.getItem('name') != "undefined" || window.localStorage.getItem('name') != null  )) 
+    {
+
+
+
       
 console.log("hello");
-        this.profileData = this.datafire.object(`profile/${data.uid}`); 
-        console.log(data);
-
+ this.user.emailaddress = window.localStorage.getItem('email')
+this.user.name = window.localStorage.getItem('name')
+console.log("email",this.user.emailaddress);
+console.log("name",this.user.name)
       }
       else {
-        console.log("data doesnot exist", data );
+        console.log("data doesnot exist");
       }
-    })
 
   }
 
   logout() {
-    this.authfire.auth.signOut();
     window.localStorage.removeItem('email');
+    window.localStorage.removeItem('name');
+    window.localStorage.removeItem('userId');
+
   this.navCtrl.setRoot(WelcomePage);
       this.navCtrl.popToRoot();   
 

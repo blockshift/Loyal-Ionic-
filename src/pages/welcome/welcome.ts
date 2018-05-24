@@ -1,3 +1,5 @@
+import { DiffSignupPage } from './../diff-signup/diff-signup';
+import { ProfilePage } from './../profile/profile';
 import { LoginPage } from './../login/login';
 import { RegisterPage } from './../register/register';
 import { Component } from '@angular/core';
@@ -31,7 +33,7 @@ this.navCtrl.setRoot(LoginPage);
 
   register () {
 
-this.navCtrl.setRoot(RegisterPage);
+this.navCtrl.setRoot(DiffSignupPage);
   }
 
 }

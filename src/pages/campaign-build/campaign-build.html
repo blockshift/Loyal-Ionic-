@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar color = "danger" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Build Campaign</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+
+
+  <ion-list>
+
+    <br><br><br>
+    <ion-item>
+      <ion-label floating>Campaign Name</ion-label>
+      <ion-input type="text" [(ngModel)]="feed.campaign_name" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+        
+      <img [src]="base64Image" *ngIf="base64Image" />
+      <button ion-button color="primary" block (click)="openeditprofile()" >Upload Picture </button>
+
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Campaign Validity Date</ion-label>
+      <ion-datetime displayFormat="D-MMM-YYYY" [(ngModel)]="feed.campaignValidityDate"></ion-datetime>
+      <!-- <ion-input type="text" ></ion-input> -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Campaign Balance</ion-label>
+     
+        <ion-input type="number" [(ngModel)]="feed.campaignbalance" ></ion-input>
+     
+      </ion-item>
+
+    <ion-item>
+      <ion-label floating>Campaign Location</ion-label>
+      <ion-input type="text" [(ngModel)]="feed.campaignlocation" ></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label>City</ion-label>
+      <ion-select [(ngModel)]="feed.city_id" >
+        <ion-option value="1">Karachi</ion-option>
+        <ion-option value="2">Lahore</ion-option>
+        <ion-option value="3">Islamabad</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select [(ngModel)]="feed.category_id" >
+        <ion-option value="1" >Resturant</ion-option>
+        <ion-option value="2">Saloon and Spa</ion-option>
+        <ion-option value="3">Apparel and Footwear</ion-option>
+        <ion-option value="4">Entertainment</ion-option>
+        <ion-option value="5">Health Care</ion-option>
+
+      </ion-select>
+    </ion-item>
+
+
+
+    <ion-item>
+      <button ion-button round (click)="addfeed()" style="width: 50%; align-content: center; height: 30px">Add Campaign </button>
+    </ion-item>
+
+
+  </ion-list>
+
+
+</ion-content>
+

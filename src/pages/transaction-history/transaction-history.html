@@ -1,0 +1,56 @@
+
+<ion-header>
+  <ion-navbar color = "primary" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Transaction History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<ion-card *ngIf="name" >
+    
+  <ion-card-header>
+   <h3>Recieved From :  {{name}}</h3> 
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>Points earned : {{token}}</p>
+  
+  </ion-card-content>
+
+</ion-card>
+
+<ion-card>
+    
+    <ion-card-header>
+     <h3>Recieved From : KFC </h3> 
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p>Points earned : 300 </p>
+    
+    </ion-card-content>
+  
+  </ion-card>
+
+
+  <ion-card>
+    
+      <ion-card-header>
+       <h3>Recieved From : Magic Suace </h3> 
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>Points earned : 200</p>
+      
+      </ion-card-content>
+    
+    </ion-card>
+    
+  
+
+</ion-content>

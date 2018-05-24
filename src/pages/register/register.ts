@@ -19,36 +19,36 @@ export class RegisterPage {
 
 user = {} as User ;
 
-alert(message : string) {
-  this.alrtctrl.create({
+// alert(message : string) {
+//   this.alrtctrl.create({
 
-    title: 'Info',
-    subTitle: message,
-    buttons: ['OK']
-  }).present();
+//     title: 'Info',
+//     subTitle: message,
+//     buttons: ['OK']
+//   }).present();
 
-}  
+// }  
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private authfire : AngularFireAuth , public alrtctrl : AlertController ) {
-  }
+//   constructor(public navCtrl: NavController, public navParams: NavParams, private authfire : AngularFireAuth , public alrtctrl : AlertController ) {
+//   }
 
- register(user : User) {
+//  register(user : User) {
 
-  console.log(this.user);
-  this.authfire.auth.createUserWithEmailAndPassword(user.email,user.password )
-  .then(data =>{
-    console.log("got data", data);
-    this.alert('Successfully ! You\'are Registered ');
-      this.navCtrl.push(ProfilePage); 
+//   console.log(this.user);
+//   this.authfire.auth.createUserWithEmailAndPassword(user.email,user.password )
+//   .then(data =>{
+//     console.log("got data", data);
+//     this.alert('Successfully ! You\'are Registered ');
+//       this.navCtrl.push(ProfilePage); 
     
-  })
+//   })
 
 
-.catch(error => {
-  console.log("Error is ",error);
-  this.alert(error.message);
-});
-}
+// .catch(error => {
+//   console.log("Error is ",error);
+//   this.alert(error.message);
+// });
+// }
 
 }

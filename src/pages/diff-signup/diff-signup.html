@@ -1,0 +1,23 @@
+
+  <ion-content padding id="welcome">
+
+
+    <button ion-button color="primary" class="btn" (click)="login()" >Login</button>
+
+
+  <img src="assets/imgs/gravy.png" class="logo" />
+
+  <button ion-button  color="primary" full (click)="doFacebook()">
+    <ion-icon name="logo-facebook"></ion-icon>&nbsp;&nbsp;
+    Login with Facebook
+  </button>
+  <button ion-button color="danger" full (click)="doGoogle()">
+    <ion-icon name="logo-google"></ion-icon>&nbsp;&nbsp;
+    Login with Google
+  </button>
+
+  <ion-item>
+    <button (click)="create()" ion-button block>Create Account</button>
+</ion-item>
+
+</ion-content>

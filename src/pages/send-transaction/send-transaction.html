@@ -1,0 +1,38 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Send Points</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+
+    <ion-title>
+      Points Transaction
+    </ion-title>
+    <ion-card-content>
+
+      <ion-item>
+        
+      <p> From :  {{user.from}}</p>
+    </ion-item>
+
+    <ion-item>
+          <p>To : {{user.to}}</p>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label stacked>Points</ion-label>
+              <ion-input type="number" placeholder="enter Points to send" #points [(ngModel)] = "user.gravy" ></ion-input>
+            </ion-item>
+
+          </ion-card-content>
+          <button ion-button (click)="sendToken(user)" color="primary" style="margin-left: 175px;" > Send </button>
+        </ion-card>
+
+</ion-content>

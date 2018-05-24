@@ -2,11 +2,26 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>Pages</ion-title>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
+
+  
+
   <ion-content>
+
+
+      <ion-card text-center style=" -webkit-box-shadow: none!important;">
+        <button style="background : transparent" (click)="forward()"  >
+          <img src="assets/imgs/download.png" style="height: 30vw; width: 30vw; border: 1px solid #fff; border-radius: 50%; display: inline-block; margin-left: auto; margin-right: auto;"/>
+        </button>
+          <h2> {{  user.name }}</h2>
+          <h2>hello!! Gravian</h2>
+          <hr>
+      </ion-card>
+
+
     <ion-list>
       <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}

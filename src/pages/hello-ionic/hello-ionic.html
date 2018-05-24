@@ -1,16 +1,23 @@
 <ion-header>
   <ion-navbar color = "danger" >
-    <button ion-button menuToggle>
+    <ion-button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Gravyy</ion-title>
+    </ion-button>
+    <ion-title>Gravy</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="qrcode()">
+        <ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon>
+      </button>
+    </ion-buttons>
+        
+      
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-  <ion-item class="row">
+  <!-- <ion-item class="row">
 
 <ion-label class="item item-input item-select"> Select City :</ion-label>
    
@@ -19,10 +26,15 @@
        <ion-option >Karachi</ion-option>
        <ion-option>Lahore</ion-option>
     </ion-select>
-  </ion-item>
+  </ion-item> -->
 
-    <h3>Welcome to your  Home!</h3>
+    <h3 class="heading" style=" margin-top: 80px;" >Gravy Points !!</h3>
+<p class="para" >{{token}}</p>
 
+<ion-view class="row" id="btn" >
+  <button ion-button (click)="scan()" >Send</button>
+  <button ion-button (click)="scan()" >Recieve</button>
+</ion-view>
 
 
 

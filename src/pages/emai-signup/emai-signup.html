@@ -1,0 +1,19 @@
+
+
+<ion-content padding id="email">
+
+<button class="button1" (click)="back()" ><ion-icon name="arrow-back"></ion-icon></button>
+
+
+
+<h1 class="heading" style=" margin-top : 140px; "  > your email ? </h1>
+
+
+<ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="user.emailaddress" #emailaddress  ></ion-input>
+  </ion-item>
+
+<button class="button2" (click)="forward()" ><ion-icon name="arrow-round-forward"></ion-icon></button>
+
+</ion-content>

@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary" >
-    <ion-title>Profile</ion-title>
+    <ion-title>Sign Up</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,21 +15,69 @@
 
 <ion-content padding>
 
-    <ion-item>
+    <!-- <ion-item>
         <ion-label floating>Username</ion-label>
-        <ion-input type="email" [(ngModel)] = "profile.username"  ></ion-input>
+        <ion-input type="emailaddressaddress" [(ngModel)] = "profile.username"  ></ion-input>
       </ion-item>
 
       <ion-item>
           <ion-label floating>First name</ion-label>
-          <ion-input type="email" [(ngModel)] = "profile.firstname"  ></ion-input>
+          <ion-input type="emailaddressaddress" [(ngModel)] = "profile.firstname"  ></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Last name</ion-label>
-            <ion-input type="email" [(ngModel)] = "profile.lastname"  ></ion-input>
+            <ion-input type="emailaddressaddress" [(ngModel)] = "profile.lastname"  ></ion-input>
           </ion-item>
 
-          <button ion-button clear block (click)="create()" >Create Profile</button>
+          <button ion-button clear block (click)="create()" >Create Profile</button> -->
+
+
+
+
+          <ion-list>
+            <form #myForm="ngForm" (ngSubmit)="postData()">
+                <ion-item>
+                    <ion-label floating>Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="users.name" id="name" name="name" required #name="ngModel"></ion-input>
+    
+                </ion-item>
+                <span *ngIf="name.errors">
+                    <span [hidden]="!name.errors.required">
+                        <ion-label style="color: red; margin-left: 16px;"> Name is required </ion-label>
+                    </span>
+                </span>
+    
+                <ion-item>
+                    <ion-label floating>Email-address</ion-label>
+                    <ion-input type="email" id="emailaddress"  [(ngModel)]="users.emailaddress"  name="emailaddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required #emailaddress="ngModel"  ></ion-input>
+                </ion-item>
+                <span *ngIf="emailaddress.errors">
+                    <span [hidden]="!emailaddress.errors.required">
+                        <ion-label style="color: red; margin-left: 16px;"> emailaddress is required </ion-label>
+                    </span>
+                    <span [hidden]="!emailaddress.errors.pattern">
+                        <ion-label style="color: red; margin-left: 16px;"> Please enter a valid emailaddressaddress </ion-label>
+                    </span>
+                </span>
+    
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input type="password" id="password" [(ngModel)]="users.password" name="password" required #password="ngModel"></ion-input>
+                </ion-item>
+                <span *ngIf="password.errors">
+                    <span [hidden]="!password.errors.required">
+                        <ion-label style="color: red; margin-left: 16px;"> password is required </ion-label>
+                    </span>
+                </span>
+    
+                <ion-item>
+                    <button [disabled]="!myForm.form.valid" type="submit" ion-button block>Submit</button>
+                </ion-item>
+            </form>
+        </ion-list>
+
+
+
 
 </ion-content>
